@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   SIAGA COMMUNITY
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   .hidden-section {
+      display: none;
+    }
+  </style>
+  <script>
+   function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function showDetail(detailId) {
+      showSection(detailId);
+    }
+
+    function goBack() {
+      showSection('home');
+    }
+
+    function toggleMenu() {
+      const nav = document.getElementById('nav-menu');
+      nav.classList.toggle('hidden');
+    }
+  </script>
+ </head>
+ <body class="font-roboto bg-gray-100">
+  <header class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4">
+   <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center">
+     <img alt="Gambar logmedis JPG.jpg" class="mr-2" height="50" src="Gambar logmedis JPG..jpg" width="50"/>
+     <h1 class="text-2xl font-bold">
+      SIAGA COMMUNITY
+     </h1>
+    </div>
+    <button class="text-white md:hidden" onclick="toggleMenu()">
+     <i class="fas fa-bars">
+     </i>
+    </button>
+    <nav class="hidden md:flex space-x-4" id="nav-menu">
+     <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+      <li>
+       <a class="hover:underline cursor-pointer" onclick="showSection('home')">
+        Beranda
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline cursor-pointer" onclick="showSection('about')">
+        Tentang
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline cursor-pointer" onclick="showSection('services')">
+        Layanan
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline cursor-pointer" onclick="showSection('contact')">
+        Kontak
+       </a>
+      </li>
+      <li>
+       <a class="hover:underline cursor-pointer" onclick="showSection('team')">
+        Our Team
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto p-4">
+   <section class="my-8" id="home">
+    <h3 class="text-2xl font-bold mb-4">
+     Beranda
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail1')">
+      <img alt="luka1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="luka1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Luka Bakar
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 1.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail2')">
+      <img alt="patahtulang1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="patahtulang1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Patah Tulang
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 2.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail3')">
+      <img alt="keseleo1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="keseleo1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Keseleo
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 3.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail4')">
+      <img alt="tersedak1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="tersedak1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Orang Tersedak
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 4.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail5')">
+      <img alt="mimisan1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="mimisan1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Mimisan
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 5.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showDetail('detail6')">
+      <img alt="pingsa1.jpg" class="w-full h-48 object-cover rounded mb-4" height="200" src="pingsan1.jpg" width="300"/>
+      <h4 class="text-xl font-bold mb-2">
+       Pertolongan Pertama pada Orang Pingsan
+      </h4>
+      <p class="text-gray-700">
+       Deskripsi singkat dari berita item 6.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail1">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Luka Bakar
+    </h3>
+    <img alt="luka2.jpg" class="w-full h-auto object-cover rounded mb-4" src="luka2.jpg"/>
+    <p class="text-lg mb-4">
+     Luka bakar adalah kerusakan pada kulit atau jaringan tubuh yang disebabkan oleh panas, bahan kimia, listrik, sinar matahari, atau radiasi. Luka bakar dapat menyebabkan rasa sakit yang hebat, pembengkakan, dan lepuhan. Luka bakar yang parah dapat menyebabkan kerusakan permanen pada kulit dan jaringan di bawahnya, serta dapat mengancam nyawa jika tidak ditangani dengan benar. Pertolongan pertama yang cepat dan tepat sangat penting untuk mengurangi kerusakan dan mempercepat penyembuhan.
+    </p>
+    <h4 class="text-xl font-bold mb-2">
+     Langkah-langkah Pertolongan Pertama:
+    </h4>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Dinginkan area yang terbakar dengan air mengalir selama 10-20 menit. Ini membantu mengurangi suhu kulit dan mencegah kerusakan lebih lanjut.
+     </li>
+     <li>
+      Hindari menggunakan es atau air es karena dapat menyebabkan kerusakan lebih lanjut pada jaringan kulit.
+     </li>
+     <li>
+      Tutupi luka dengan kain bersih atau perban steril untuk melindungi dari infeksi.
+     </li>
+     <li>
+      Jangan pecahkan lepuhan yang terbentuk karena dapat meningkatkan risiko infeksi.
+     </li>
+     <li>
+      Segera cari bantuan medis jika luka bakar parah atau melibatkan area tubuh yang luas.
+     </li>
+    </ul>
+    <h4 class="text-xl font-bold mb-2">
+     Tips Tambahan:
+    </h4>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Hindari mengoleskan minyak, mentega, atau salep pada luka bakar karena dapat memperburuk kondisi.
+     </li>
+     <li>
+      Jika pakaian menempel pada luka bakar, jangan mencoba melepaskannya. Potong pakaian di sekitar luka.
+     </li>
+     <li>
+      Minum banyak air untuk mencegah dehidrasi, terutama jika luka bakar melibatkan area tubuh yang luas.
+     </li>
+     <li>
+      Jika luka bakar disebabkan oleh bahan kimia, bilas area yang terkena dengan air mengalir selama 20-30 menit dan segera cari bantuan medis.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail2">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Patah Tulang
+    </h3>
+    <img alt="patahtulang2.jpg" class="w-full h-auto object-cover rounded mb-4" src="patahtulang2.jpg"/>
+    <p class="text-lg mb-4">
+     Patah tulang adalah kondisi di mana tulang mengalami keretakan atau patah. Patah tulang dapat terjadi akibat cedera, kecelakaan, atau kondisi medis tertentu seperti osteoporosis. Gejala patah tulang meliputi rasa sakit yang hebat, pembengkakan, deformitas, dan ketidakmampuan untuk menggerakkan bagian tubuh yang terkena. Pertolongan pertama yang tepat sangat penting untuk mencegah kerusakan lebih lanjut dan mempersiapkan pasien untuk perawatan medis lebih lanjut.
+    </p>
+    <h4 class="text-xl font-bold mb-2">
+     Langkah-langkah Pertolongan Pertama:
+    </h4>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Jangan menggerakkan bagian tubuh yang patah untuk mencegah kerusakan lebih lanjut pada tulang dan jaringan di sekitarnya.
+     </li>
+     <li>
+      Stabilkan bagian tubuh yang patah dengan menggunakan bidai atau bahan keras lainnya. Pastikan bidai mencakup sendi di atas dan di bawah area yang patah.
+     </li>
+     <li>
+      Gunakan es yang dibungkus kain untuk mengurangi pembengkakan dan rasa sakit. Hindari meletakkan es langsung pada kulit.
+     </li>
+     <li>
+      Segera cari bantuan medis untuk penanganan lebih lanjut.
+     </li>
+    </ul>
+    <h4 class="text-xl font-bold mb-2">
+     Tips Tambahan:
+    </h4>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Jika patah tulang terjadi pada kaki atau lengan, angkat bagian tubuh yang patah lebih tinggi dari jantung untuk mengurangi pembengkakan.
+     </li>
+     <li>
+      Hindari memberikan makanan atau minuman kepada pasien jika ada kemungkinan mereka memerlukan pembedahan.
+     </li>
+     <li>
+      Jika patah tulang terbuka (tulang menembus kulit), tutupi luka dengan kain bersih atau perban steril dan segera cari bantuan medis.
+     </li>
+     <li>
+      Jangan mencoba mengembalikan tulang yang patah ke posisi semula karena dapat menyebabkan kerusakan lebih lanjut.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail3">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Keseleo
+    </h3>
+    <img alt="keseleo.jpg" class="w-full h-auto object-cover rounded mb-4" src="keseleo.jpg"/>
+    <p class="text-lg mb-4">
+     Keseleo adalah cedera pada ligamen yang menghubungkan tulang pada sendi. Keseleo biasanya terjadi akibat gerakan tiba-tiba atau berlebihan yang menyebabkan ligamen meregang atau robek. Gejala keseleo meliputi rasa sakit, pembengkakan, memar, dan ketidakmampuan untuk menggerakkan sendi yang terkena. Pertolongan pertama yang tepat dapat membantu mengurangi rasa sakit dan pembengkakan serta mempercepat proses penyembuhan.
+    </p>
+    <h4 class="text-xl font-bold mb-2">
+     Langkah-langkah Pertolongan Pertama:
+    </h4>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Istirahatkan bagian tubuh yang keseleo untuk mencegah kerusakan lebih lanjut.
+     </li>
+     <li>
+      Gunakan es yang dibungkus kain untuk mengurangi pembengkakan dan rasa sakit. Terapkan es selama 15-20 menit setiap jam selama 48 jam pertama.
+     </li>
+     <li>
+      Balut bagian tubuh yang keseleo dengan perban elastis untuk memberikan dukungan dan mengurangi pembengkakan. Pastikan perban tidak terlalu ketat.
+     </li>
+     <li>
+      Angkat bagian tubuh yang keseleo lebih tinggi dari jantung untuk mengurangi pembengkakan.
+     </li>
+     <li>
+      Segera cari bantuan medis jika keseleo parah atau jika tidak ada perbaikan setelah beberapa hari.
+     </li>
+    </ul>
+    <h4 class="text-xl font-bold mb-2">
+     Tips Tambahan:
+    </h4>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Hindari aktivitas yang dapat memperburuk cedera selama proses penyembuhan.
+     </li>
+     <li>
+      Setelah 48 jam pertama, Anda dapat menggunakan kompres hangat untuk membantu mengurangi rasa sakit dan meningkatkan sirkulasi darah.
+     </li>
+     <li>
+      Lakukan latihan peregangan dan penguatan secara perlahan setelah rasa sakit dan pembengkakan berkurang untuk memulihkan kekuatan dan fleksibilitas sendi.
+     </li>
+     <li>
+      Gunakan sepatu yang mendukung dan sesuai ukuran untuk mencegah keseleo pada pergelangan kaki.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail4">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Orang Tersedak
+    </h3>
+    <img alt="tersedak.jpg" class="w-full h-auto object-cover rounded mb-4" src="tersedak.jpg"/>
+    <p class="text-lg mb-4">
+     Tersedak terjadi ketika saluran napas tersumbat oleh makanan atau benda asing. Tersedak dapat menyebabkan kesulitan bernapas, batuk, dan dalam kasus yang parah, kehilangan kesadaran. Pertolongan pertama yang cepat dan tepat sangat penting untuk membuka saluran napas dan mencegah komplikasi serius. Ada dua teknik utama yang digunakan untuk membantu orang yang tersedak: pukulan punggung dan dorongan perut (manuver Heimlich).
+    </p>
+    <h4 class="text-xl font-bold mb-2">
+     Langkah-langkah Pertolongan Pertama:
+    </h4>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Berikan 5 pukulan punggung di antara tulang belikat dengan menggunakan tumit tangan. Pastikan orang yang tersedak membungkuk ke depan agar benda asing dapat keluar dari mulut.
+     </li>
+     <li>
+      Jika pukulan punggung tidak berhasil, lakukan 5 dorongan perut (manuver Heimlich). Berdiri di belakang orang yang tersedak, letakkan tangan Anda di atas pusar, dan dorong ke dalam dan ke atas dengan cepat.
+     </li>
+     <li>
+      Ulangi langkah-langkah tersebut hingga benda asing keluar atau bantuan medis tiba.
+     </li>
+    </ul>
+    <h4 class="text-xl font-bold mb-2">
+     Tips Tambahan:
+    </h4>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Jika orang yang tersedak kehilangan kesadaran, segera mulai resusitasi jantung paru (CPR) dan minta seseorang untuk menghubungi layanan darurat.
+     </li>
+     <li>
+      Untuk bayi yang tersedak, gunakan dua jari untuk memberikan dorongan perut dan pukulan punggung yang lebih lembut.
+     </li>
+     <li>
+      Hindari memberikan makanan atau minuman kepada orang yang baru saja tersedak hingga mereka benar-benar pulih.
+     </li>
+     <li>
+      Ajarkan teknik pertolongan pertama pada tersedak kepada anggota keluarga dan teman-teman untuk meningkatkan kesiapsiagaan dalam situasi darurat.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail5">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Mimisan
+    </h3>
+    <img alt="mimisan2.jpg" class="w-full h-auto object-cover rounded mb-4" src="mimisan2.jpg"/>
+    <p class="text-lg mb-4">
+     Mimisan adalah pendarahan dari hidung yang disebabkan oleh pecahnya pembuluh darah di dalam hidung. Pertolongan pertama pada mimisan meliputi langkah-langkah berikut:
+    </p>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+      Duduk tegak dan condongkan tubuh sedikit ke depan.
+     </li>
+     <li>
+      Jepit bagian lunak hidung dengan ibu jari dan jari telunjuk selama 10-15 menit.
+     </li>
+     <li>
+      Hindari berbaring atau menengadahkan kepala ke belakang.
+     </li>
+     <li>
+      Segera cari bantuan medis jika pendarahan tidak berhenti setelah 20 menit.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="detail-section hidden-section my-8" id="detail6">
+    <h3 class="text-2xl font-bold mb-4">
+     Pertolongan Pertama pada Orang Pingsan
+    </h3>
+    <img alt="pingsan2.jpg" class="w-full h-auto object-cover rounded mb-4" src="pingsan2.jpg"/>
+    <p class="text-lg mb-4">
+     Pingsan adalah kehilangan kesadaran sementara yang disebabkan oleh penurunan aliran darah ke otak. Pertolongan pertama pada orang pingsan meliputi langkah-langkah berikut:
+    </p>
+    <ul class="list-disc list-inside mb-4">
+     <li>
+Pindahkan ke Tempat Aman
+• Pindahkan Korban: Jika memungkinkan, pindahkan orang yang pingsan ke tempat yang lebih aman dan nyaman, seperti tepi jalan jika pingsan di jalan atau tempat teduh jika disebabkan oleh panas
+• Baringkan orang yang pingsan dengan posisi kaki lebih tinggi dari kepala.
+• Pastikan jalan napas terbuka dan longgarkan pakaian yang ketat.
+     </li>
+     <li>
+      Longgarkan pakaian yang ketat.
+     </li>
+     <li>
+      Hindari memberikan makanan atau minuman hingga orang tersebut sadar sepenuhnya.
+     </li>
+     <li>
+     Hubungi Bantuan Medis
+• Segera Hubungi Medis: Jika korban tidak sadar selama lebih dari beberapa menit, tidak bernapas, atau denyut nadinya tidak terdeteksi, segera hubungi layanan medis darurat dan siapkan untuk memberikan CPR jika diperlukan
+Dengan mengikuti langkah-langkah ini, Anda dapat memberikan pertolongan pertama yang efektif kepada seseorang yang pingsan dan membantu mereka mendapatkan perawatan yang diperlukan.
+     </li>
+    </ul>
+    <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="goBack()">
+     Kembali
+    </button>
+   </section>
+   <section class="hidden-section my-8" id="about">
+    <h3 class="text-2xl font-bold mb-4">
+     Tentang Kami
+    </h3>
+    <p class="text-lg">
+     SIGAP KOMUNITAS atau Siaga Peduli ini adalah website komunitas yang dimana masyarakat dan kalangan remaja memudahkan dalam menerima layanan kesehatan yang terkait dengan pertolongan pertama sebelum petugas kesehatan tiba.
+    </p>
+   </section>
+   <section class="hidden-section my-8" id="services">
+    <h3 class="text-2xl font-bold mb-4">
+     Layanan Kami
+    </h3>
+    <p class="text-lg">
+     Kami menyediakan berbagai layanan pertolongan pertama dan sumber daya edukasi untuk membantu Anda menangani keadaan darurat dengan efektif.
+    </p>
+   </section>
+   <section class="hidden-section my-8" id="contact">
+    <h3 class="text-2xl font-bold mb-4">
+     Hubungi Kami
+    </h3>
+    <p class="text-lg">
+     Untuk informasi lebih lanjut, silakan hubungi kami di kelompok6@gmail.com atau telepon di 082352295722
+    </p>
+    <div class="mt-4">
+     <a class="text-green-500 hover:text-green-700" href="https://wa.me/+6282352295722" target="_blank">
+      <i class="fab fa-whatsapp fa-2x">
+      </i>
+     </a>
+    </div>
+   </section>
+   <section class="hidden-section my-8" id="team">
+    <h3 class="text-2xl font-bold mb-4">
+     Our Team
+    </h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="verdi.jpg" class="w-24 h-24 object-cover rounded-full mx-auto mb-4" src="verdi.jpg"/>
+      <h4 class="text-xl font-bold mb-2 text-center">
+       Verdi Dwi Akres
+      </h4>
+      <p class="text-gray-700 text-center">
+       Developer &amp; Admin
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="bram.jpg" class="w-24 h-24 object-cover rounded-full mx-auto mb-4" src="bram.jpg"/>
+      <h4 class="text-xl font-bold mb-2 text-center">
+       Brama Wijaya
+      </h4>
+      <p class="text-gray-700 text-center">
+       Developer
+      </p>
+     </div>
+   </section>
+  </main>
+  <footer class="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 mt-8">
+   <div class="container mx-auto text-center">
+    <p>
+     © 2024 FIRST AIDS. All rights reserved.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
